@@ -1,0 +1,5 @@
+<div class = "py-5">
+    <h2>{{name}}</h2>
+    <button class="btn btn-primary" (click) = "create()" >Create </button>
+    <counter *ngFor="let counter of counters" [counter]="counter"></counter>
+</div>
