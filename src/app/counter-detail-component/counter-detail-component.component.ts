@@ -8,14 +8,20 @@ import { Counter } from '../counter';
 })
 export class CounterDetailComponentComponent implements OnInit {
 
-  @Input() counter: Counter;
+@Input() counter: Counter;
 
   constructor() { }
 
   ngOnInit(): void {}
 
-  increment(): void {};
-  decrement(): void {};
+  increment(): void {
+    this.counter.value += 1;
+  };
+  decrement(): void {
+    if (this.counter.value > 0) {
+          this.counter.value -= 1;
+    }
+  };
 
 
 }
